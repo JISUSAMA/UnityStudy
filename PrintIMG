@@ -10,10 +10,10 @@ public void PrintButtonOn()
     }
     public void MyPrint()
     {
-       string path = "C:\\Users\\gateways\\AppData\\LocalLow\\PrintPictureImage.png";//图片路径 + 将图像调整为750×400点(计算：750mm/28.346 px/cm＝529点，400mm／28.346 pm／cm＝352点)
-       string exepath = "C:\\Program Files\\Honeyview" + @"\Honeyview.exe";//这个是需要下载的应用直接放到电脑上就行(调用打印机打印图片应用的路径)
-       ProcessStartInfo info = new ProcessStartInfo(exepath);//指定启动进程时使用的一组值
-       info.Arguments = path;//获取或设置启动应用程序时要使用的一组命令行自变量
+       string path = "C:\\Users\\gateways\\AppData\\LocalLow\\PrintPictureImage.png";
+       string exepath = "C:\\Program Files\\Honeyview" + @"\Honeyview.exe";
+       ProcessStartInfo info = new ProcessStartInfo(exepath);
+       info.Arguments = path;
        using (Process p = new Process())
        {
            p.StartInfo = info;
